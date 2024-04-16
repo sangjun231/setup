@@ -4,11 +4,12 @@ body{
 
 #guestbookbtn {
     align-items: center;
-    background-color: #fee6e3;
+    background-color: black;
     border: 2px solid #111;
     border-radius: 8px;
     box-sizing: border-box;
-    color: #111;
+    color: white;
+    font-weight: 700;
     cursor: pointer;
     display: flex;
     font-family: Inter,sans-serif;
@@ -17,7 +18,7 @@ body{
     justify-content: center;
     line-height: 24px;
     max-width: 100%;
-    padding: 0 25px;
+    padding: 0 15px;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -27,7 +28,7 @@ body{
 }
 
 #guestbookbtn:after {
-    background-color: #111;
+    background-color: #fee6e3;
     border-radius: 8px;
     content: "";
     display: block;
