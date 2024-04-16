@@ -82,6 +82,7 @@ body{
     border: 2px solid black;
     border-radius: 5px;
 }
+
 .sumbit-area input:nth-child(2){
     width: 60%;
     height: 75%;
@@ -89,11 +90,12 @@ body{
     border: 2px solid black;
     border-radius: 5px;
 }
+
 .sumbit-area button {
     align-items: center;
     background-clip: padding-box;
     background-color: #fa6400;
-    border: 1px solid transparent;
+    border: 2px solid rgb(255, 72, 0);
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
@@ -159,6 +161,7 @@ body{
     padding: 1rem;
     box-sizing: border-box;
     overflow-y: auto;
+    border: 2px solid black;
 }
 
 .messagebox{
