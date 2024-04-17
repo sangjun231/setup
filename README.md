@@ -16,4 +16,5 @@
 weather.js랑
 weather.css랑
 
-이미지(4개만 빼주시면됩니당
+이미지(4개
+ cloudy_image, wind~~ , snow~~, rainy~~}
