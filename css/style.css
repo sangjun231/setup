@@ -2,18 +2,21 @@
 
 /* 여기서부터 카드배치 & 효과 */
 .intro-section {
-  justify-content: center;
-  display: flex;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   width: 100%;
+  height: 643px;
   left: 0%;
+  gap: 1rem;
 }
 
 .card {
   width: 300px;
   height: 600px;
-  margin: 30px 30px;
+  /* margin: 30px 30px; */
   /* padding: 30px; */
   perspective: 1000px;
   border: 0px;
@@ -46,20 +49,26 @@
 
 .front {
   border-radius: 15px;
-  background-color: plum;
+  background-color: #fbe9c7;
   transform: rotateY(0deg);
 }
 
 .back {
+  border-radius: 15px;
+  background-color: #fbe9c7;
   transform: rotateY(-180deg);
 }
 
 .card:hover .front {
   transform: rotateY(-180deg);
+  border-radius: 15px;
+  scale: 120%;
 }
 
 .card:hover .back {
   transform: rotateY(0deg);
+  border-radius: 15px;
+  scale: 120%;
 }
 
 .cardimg-wrapper {
@@ -81,6 +90,48 @@
   font-size: 2rem;
 }
 
-.basic-name > p {
-  font-family: "Nanum Pen Script", cursive;
+.back a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .back a:hover {
+    color: #ffea80;
+  }
+}
+
+.card-back-contents {
+  position: relative;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-back-contents:nth-child(1),
+.card-back-contents:nth-child(2) {
+  height: 15%;
+}
+
+.card-back-contents:nth-child(3),
+.card-back-contents:nth-child(4),
+.card-back-contents:nth-child(5) {
+  height: 20%;
+}
+
+.card-back-contents p {
+  margin-bottom: 0;
+}
+
+.card-back-contents p:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.card-back-contents p:nth-child(2) {
+  font-size: 1.1rem;
+}
+
+.card-back-contents a > p:nth-child(1) {
+  font-size: 1.1rem;
 }
