@@ -1,0 +1,79 @@
+/* 여기서부터 카드배치 & 효과 */
+.intro-section {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  left: 0%;
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  margin: 30px 30px;
+  /* padding: 30px; */
+  perspective: 1000px;
+  border: 0px;
+}
+.front img{
+  border-radius: 15px;
+  width: auto;
+  height: 300px;
+}
+
+.back img{
+  border-radius: 15px;
+  width: auto;
+  height: 100%;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.8s ease;
+}
+
+.front {
+  border-radius: 15px;
+  background-color: plum;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.cardimg-wrapper{
+  position: relative;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-name{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
