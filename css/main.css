@@ -1,107 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 
 * {
-    font-family: "Nanum Pen Script", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body{
-    display: flex;
-    justify-content: center;
+body {
+  display: flex;
+  justify-content: center;
 }
 
-.body-wrapper{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.body-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.body-wrapper-contained{
-    width: 1440px;
-    height: auto;
+.body-wrapper-contained {
+  width: 1440px;
+  height: auto;
 }
 
-.main-title{
-    width: 90%;
+.main-title {
+  width: 90%;
 }
 
 .main {
-    color: black;
-    background-color: #FFEA80;
-    background-position: center;
-    background-size: cover;
+  color: black;
+  background-color: #ffea80;
+  background-position: center;
+  background-size: cover;
 }
 
 .main2 {
-    color: black;
-    font-size: 40px;
-    background-color: #FFEA80;
-    background-position: center;
-    background-size: cover;
+  color: black;
+  font-size: 40px;
+  background-color: #ffea80;
+  background-position: center;
+  background-size: cover;
 }
 
 .container2 {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 2rem 0;
 }
 
 .item {
-    width: calc(100% / 3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.item span{
-    font-size: 2rem;
+.item span {
+  font-size: 2rem;
 }
 
 .talk {
-    width: 200px;
-    height: 200px;
-    background-image: url(/img/talk.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: table;
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/talk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: table;
 }
 
 .talk2 {
-    width: 200px;
-    height: 200px;
-    background-image: url(/img/talk2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: table;
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/talk2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: table;
 }
 
 .talk3 {
-    width: 200px;
-    height: 200px;
-    background-image: url(/img/talk3.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: table;
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/talk3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: table;
 }
 
 .bord {
-    margin-bottom: 1px;
-    width: 100px;
-    height: 50px;
-    border: 1px;
-    text-align: center;
+  margin-bottom: 1px;
+  width: 100px;
+  height: 50px;
+  border: 1px;
+  text-align: center;
 }
 
 .foot {
-    position:relative;
-    padding: 29px 0;
-    background-color: #FFEA80;
+  position: relative;
+  padding: 29px 0;
+  background-color: #ffea80;
 }
