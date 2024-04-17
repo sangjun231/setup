@@ -58,6 +58,8 @@ h2 {
 }
 
 .main-title {
+  display: flex;
+  justify-content: center;
   width: 90%;
 }
 
@@ -205,4 +207,10 @@ h2 {
   position: relative;
   padding: 29px 0;
   background-color: #ffea80;
+}
+
+#main-logo {
+  width: 30%;
+  position: relative;
+  left: 5%;
 }
