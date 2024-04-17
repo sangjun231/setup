@@ -94,10 +94,10 @@ const insertGuestbookHtml = () => {
             <div class="guestbook-inner">
                 <div class="guestbook-contents">
                 </div>
-                <div class="sumbit-area">
+                <div class="submit-area">
                     <input id="guestbook-name" type="text" placeholder="이름 입력"></input>
                     <input id="guestbook-input" type="text" placeholder="내용 입력"></input>
-                    <button id="guestbook-sumbit">제출</button>
+                    <button id="guestbook-submit">제출</button>
                 </div>
             </div>
         </div>`;
@@ -176,7 +176,7 @@ const handleGuestBtnClick = async (event) => {
     // 찾아야 하는 요소들 탐색 및 저장
     const messageInput = document.getElementById("guestbook-input");
     const nameInput = document.getElementById("guestbook-name");
-    const submitBtn = document.getElementById("guestbook-sumbit");
+    const submitBtn = document.getElementById("guestbook-submit");
     const modal = document.querySelector(".guestbook-modal");
     let delBtns = document.querySelectorAll("#delete");
 
@@ -222,7 +222,7 @@ const handleGuestBtnClick = async (event) => {
     };
 
     // 제출 버튼 클릭시 실행되는 함수
-    const handleSumbit = async (name) => {
+    const handlesubmit = async (name) => {
         // 이름이나 메시지를 입력하지 않으면 경고띄우고 얼리 리턴
         if (name.length < 1) {
             alert("이름을 먼저 입력하세요.");
@@ -259,7 +259,7 @@ const handleGuestBtnClick = async (event) => {
     // 이름 input 이벤트 리스너
     if (nameInput) nameInput.addEventListener("input", handleNameInput);
     // 제출 버튼 이벤트 리스너
-    if (submitBtn) submitBtn.addEventListener("click", handleSumbit);
+    if (submitBtn) submitBtn.addEventListener("click", handlesubmit);
 
     // 삭제 버튼들 이벤트 리스너 최초 등록
     addDelListener();

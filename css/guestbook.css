@@ -67,7 +67,7 @@ body {
     z-index: 999;
 }
 
-.sumbit-area {
+.submit-area {
     position: relative;
     width: 85%;
     display: flex;
@@ -76,7 +76,7 @@ body {
     gap: 0.3rem;
 }
 
-.sumbit-area input:nth-child(1) {
+.submit-area input:nth-child(1) {
     width: 25%;
     height: 75%;
     background-color: white;
@@ -84,7 +84,7 @@ body {
     border-radius: 5px;
 }
 
-.sumbit-area input:nth-child(2) {
+.submit-area input:nth-child(2) {
     width: 60%;
     height: 75%;
     background-color: white;
@@ -92,7 +92,7 @@ body {
     border-radius: 5px;
 }
 
-.sumbit-area button {
+.submit-area button {
     align-items: center;
     background-clip: padding-box;
     background-color: #fa6400;
@@ -120,17 +120,17 @@ body {
     height: 105%;
 }
 
-.sumbit-area button:hover,
-.sumbit-area button:focus {
+.submit-area button:hover,
+.submit-area button:focus {
     background-color: #fb8332;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.sumbit-area button:hover {
+.submit-area button:hover {
     transform: translateY(-1px);
 }
 
-.sumbit-area button:active {
+.submit-area button:active {
     background-color: #c85000;
     box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
     transform: translateY(0);
