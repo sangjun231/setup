@@ -143,33 +143,59 @@ const drawMessages = async () => {
     }
 }
 
+// 불러오는 동안 로더를 보여주기 위한 함수
+// drawOrRemove는 그릴지 지울지 스트링타입
+const drawLoaders = (drawOrRemove) => {
+    // 로더 dom
+    const loader = `<div class='loader-wrapper'><span class="loader"></span><div>`;
+    // 그려야 하는 div 선택
+    const parent = document.querySelector(".guestbook-contents");
+    // 해당 div !null 이면
+    if (parent) {
+        if (drawOrRemove === "draw") {
+            // 기존 내용을 모두 비우기
+            parent.innerHTML = "";
+            // 로더 추가하기
+            parent.insertAdjacentHTML("beforeend", loader);
+        } else {
+            // 기존 내용을 모두 비우기
+            parent.innerHTML = "";
+        }
+    }
+};
+
 // 메인 함수 ~~! 방명록버튼 클릭시 실행되고 위에서 만든 함수들을 사용하여 대부분의 기능 실행 
 const handleGuestBtnClick = async (event) => {
     // 기본 모달 엘리먼츠 삽입
     insertGuestbookHtml();
+    // 로더 삽입
+    drawLoaders("draw");
     // 메시지 가져오고 삽입하고
     await drawMessages();
 
     // 찾아야 하는 요소들 탐색 및 저장
-    const messageInput = document.getElementById('guestbook-input');
-    const nameInput = document.getElementById('guestbook-name');
-    const submitBtn = document.getElementById('guestbook-sumbit');
-    const modal = document.querySelector('.guestbook-modal');
-    let delBtns = document.querySelectorAll('#delete');
+    const messageInput = document.getElementById("guestbook-input");
+    const nameInput = document.getElementById("guestbook-name");
+    const submitBtn = document.getElementById("guestbook-sumbit");
+    const modal = document.querySelector(".guestbook-modal");
+    let delBtns = document.querySelectorAll("#delete");
 
     // 콘텐츠 외부를 클릭하면 모달 자체가 사라지게(x버튼 없이 외부 클릭으로 사라지게끔)
-    if(modal) modal.addEventListener('click', (e) => {
-        if(e.target === e.currentTarget){
-            e.currentTarget.remove();
-        }
-    })
+    if (modal)
+        modal.addEventListener("click", (e) => {
+            if (e.target === e.currentTarget) {
+                e.currentTarget.remove();
+            }
+        });
 
     // 사용자가 input 에 입력한 값을 담을 변수들
-    let messageValue = '';
-    let nameValue = '';
+    let messageValue = "";
+    let nameValue = "";
+    // 수정인지 판단할 이전 이름 값 저장 변수
+    let beforeName = "";
     // 해당 변수에 입력 값을 저장하는 함수
-    const handleMessageInput = event => messageValue = event.target.value;
-    const handleNameInput = event => nameValue = event.target.value;
+    const handleMessageInput = (event) => (messageValue = event.target.value);
+    const handleNameInput = (event) => (nameValue = event.target.value);
 
     // 게시물 삭제 함수
     // index는 삭제할 게시물의 index 임
@@ -180,48 +206,60 @@ const handleGuestBtnClick = async (event) => {
         const name = newMessages[index].name;
         // DELETE 요청 실행
         const result = await delMessages(name);
-        console.log('지우기 성공');
+        console.log("지우기 성공");
         // 삭제 성공 후 다시 메시지 리페인트
         await drawMessages();
-        // 삭제버튼들 이벤트 리스너 모두 재등록
-        addDelListener();
-    }
+    };
 
-    // 모든 x(게시물 삭제)버튼을 선택하고, 반복하여 클릭 이벤트 삭제 함수 등록 
+    // 모든 x(게시물 삭제)버튼을 선택하고, 반복하여 클릭 이벤트 삭제 함수 등록
     const addDelListener = () => {
-        delBtns = document.querySelectorAll('#delete');
-        if(delBtns){ 
+        delBtns = document.querySelectorAll("#delete");
+        if (delBtns) {
             delBtns.forEach((e, i) => {
-                e.addEventListener('click', (event) => handledelete(event, i));
-            })
+                e.addEventListener("click", (event) => handledelete(event, i));
+            });
         }
-    }
+    };
 
-    // 제출 버튼 클릭시 실행되는 함수 
-    const handleSumbit = async () => {
+    // 제출 버튼 클릭시 실행되는 함수
+    const handleSumbit = async (name) => {
         // 이름이나 메시지를 입력하지 않으면 경고띄우고 얼리 리턴
-        if(nameValue.length < 1) {
-            alert('이름을 먼저 입력하세요.');
+        if (name.length < 1) {
+            alert("이름을 먼저 입력하세요.");
             return;
-        }else if(messageValue.length < 1){
-            alert('메시지를 입력하세요.');
+        } else if (messageValue.length < 1) {
+            alert("메시지를 입력하세요.");
             return;
+        } else if (beforeName === name) {
+            if (
+                confirm(
+                    "작성자명이 동일하면 메시지 내용이 수정됩니다, 계속하시겠습니까?"
+                )
+            ) {
+                console.log("수정모드");
+            } else {
+                alert("다시 확인해주세요");
+                return;
+            }
         }
         // POST 요청 함수 실행(입력한 이름과 내용 전달)
         const result = await postMessages(nameValue, messageValue);
-        console.log(result)
+        console.log(result);
         // 제출 성공시 다시 메시지 리페인트
         await drawMessages();
         // 삭제버튼들 이벤트 리스너 재등록
         addDelListener();
-    } 
+        // 수정 상황을 대비해 flag 변수에 기존이름 할당
+        beforeName = name;
+    };
 
     // 메시지 input 이벤트 리스너
-    if(messageInput) messageInput.addEventListener('input', handleMessageInput);
+    if (messageInput)
+        messageInput.addEventListener("input", handleMessageInput);
     // 이름 input 이벤트 리스너
-    if(nameInput) nameInput.addEventListener('input', handleNameInput);
+    if (nameInput) nameInput.addEventListener("input", handleNameInput);
     // 제출 버튼 이벤트 리스너
-    if(submitBtn) submitBtn.addEventListener('click', handleSumbit);
+    if (submitBtn) submitBtn.addEventListener("click", handleSumbit);
 
     // 삭제 버튼들 이벤트 리스너 최초 등록
     addDelListener();
