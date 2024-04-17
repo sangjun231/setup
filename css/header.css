@@ -29,7 +29,7 @@ h1 {
     transform: translateX(-52%); */
 }
 
-.longlong {
+.mainSlogun {
   font-size: 60px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
@@ -44,8 +44,8 @@ h1 {
   z-index: 10;
 }
 
-.longlong:before,
-.longlong:after {
+.mainSlogun:before,
+.mainSlogun:after {
   content: "";
   position: absolute;
   height: 7px;
@@ -58,26 +58,26 @@ h1 {
   left: 50%;
 }
 
-.longlong:before {
+.mainSlogun:before {
   bottom: 0;
 }
 
-.longlong:after {
+.mainSlogun:after {
   top: 0;
 }
 
-.longlong:hover {
+.mainSlogun:hover {
   letter-spacing: 30px;
 }
 
-.longlong:hover:before,
-.longlong:hover:after {
+.mainSlogun:hover:before,
+.mainSlogun:hover:after {
   width: 95%;
   opacity: 1;
   left: 0;
 }
 
-.longlong:hover ~ h2 {
+.mainSlogun:hover ~ h2 {
   opacity: 0;
 }
 
@@ -95,4 +95,5 @@ h1 {
   -ms-transition: 1s;
   opacity: 0.1;
   z-index: -1;
+  
 }
