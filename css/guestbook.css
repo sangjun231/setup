@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+}
+
+/* #guestbookbtn {
+    align-items: center;
+    background-color: black;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 15px;
+    position: relative;
+    text-align: center;
+    text-decoration: underline auto black;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#guestbookbtn:after {
+    background-color: #fee6e3;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+#guestbookbtn:hover:after {
+    transform: translate(0, 0);
+}
+
+#guestbookbtn:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+#guestbookbtn:hover {
+    outline: 0;
+} */
+
+.guestbook-modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+}
+
+.sumbit-area{
+    position: relative;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.sumbit-area input:nth-child(1){
+    width: 25%;
+    height: 75%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.sumbit-area input:nth-child(2){
+    width: 60%;
+    height: 75%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.sumbit-area button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 2px solid rgb(255, 72, 0);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: 12%;
+    height: 105%;
+}
+
+.sumbit-area button:hover,
+.sumbit-area button:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.sumbit-area button:hover {
+    transform: translateY(-1px);
+}
+
+.sumbit-area button:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+.guestbook-inner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 60vh;
+    height: 80vh;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.guestbook-contents{
+    position: relative;
+    display: flex;
+    width: 85%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(230, 230, 230);
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: 2px solid black;
+}
+
+.messagebox{
+    position: relative;
+    width: 100%;
+    display: flex;    
+}
+
+.messagebox p{
+    position: relative;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.messagebox p span:nth-child(1){
+    width: 60%;
+}
+.messagebox p span:nth-child(2){
+    width: 33%;
+    text-align: end;
+}
+.messagebox p span:nth-child(3){
+    width: 7%;
+    text-align: end;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
