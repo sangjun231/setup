@@ -85,12 +85,12 @@ h1 {
 
 .react-background {
   color: red;
-  font-family: "Pinyon Script", cursive;
+  font-family: "Whisper", cursive;
   text-align: center;
   font-size: 100px;
   font-weight: 100;
   bottom: 30px;
-  left: 40%;
+  left: 39%;
   position: absolute;
   transition: 5s;
   -webkit-transition: 1s;
