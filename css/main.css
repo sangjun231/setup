@@ -1,7 +1,23 @@
+/* font */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+/* reset */
+div,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
 
 * {
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -9,6 +25,22 @@
 body {
   display: flex;
   justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  background-size: 40px 40px;
+}
+
+.mini_title1 {
+  background: url(/img/chicken.png) no-repeat 390px;
+  background-size: 40px 40px;
+}
+
+.mini_title2 {
+  background: url(/img/chicken.png) no-repeat 400px 30px;
+  background-size: 40px 40px;
 }
 
 .body-wrapper {
@@ -32,10 +64,79 @@ body {
 }
 
 .main {
+  width: 100%;
   color: black;
-  background-color: #ffea80;
+  /* background-color: #fff; */
   background-position: center;
   background-size: cover;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.white_box {
+  width: 1000px;
+  background-color: rgb(255, 255, 255, 0.8);
+  margin: 0 auto;
+  border-radius: 30px !important;
+}
+
+/* slider_wrap */
+.slider_wrap {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 30px;
+}
+
+.slider_wrap > h2 {
+  padding-top: 30px;
+}
+
+.content {
+  width: 750px;
+  height: 250px;
+}
+
+.inside_navi {
+  width: 630px;
+  height: 250px;
+  float: right;
+}
+
+.inside_navi > li {
+  padding-top: 50px;
+  padding-right: 20px;
+  font-size: 25px;
+  line-height: 1.4em;
+}
+
+/* 이미지 */
+.slider_img1 {
+  background: url(/img/image1.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img2 {
+  background: url(/img/image2.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img3 {
+  background: url(/img/image3.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img4 {
+  background: url(/img/image4.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img5 {
+  background: url(/img/image5.png) no-repeat 70px 0;
+  background-size: 200px 211px;
 }
 
 .main2 {
