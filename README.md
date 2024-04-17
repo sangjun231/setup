@@ -18,3 +18,6 @@ weather.css랑
 
 이미지(4개
  cloudy_image, wind~~ , snow~~, rainy~~}
+
+
+그외코드들은 다 예전main파일이라 안씁니다!
