@@ -1,0 +1,26 @@
+#weather-section {
+  background-color: burlywood;
+  text-align: right;
+  height: 310px;
+  width: 300px;
+  margin-left: auto;
+  float: right;
+  margin: auto;
+  border-radius: 20px;
+  text-align: left;
+  position: relative;
+  padding-top: 60px;
+  padding-left: 10px;
+  bottom: 305px;
+  left: 10%;
+  border-style: solid;
+  box-shadow: 12px 12px 7px rgba(7, 7, 6, 0.8);
+}
+
+#weather-section img {
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  float: right;
+  scale: 180%;
+}

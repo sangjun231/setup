@@ -1,5 +1,5 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 /* #guestbookbtn {
@@ -55,144 +55,263 @@ body{
     outline: 0;
 } */
 
-.guestbook-modal{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
+.guestbook-modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
 }
 
-.sumbit-area{
-    position: relative;
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
+.submit-area {
+  position: relative;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-.sumbit-area input:nth-child(1){
-    width: 25%;
-    height: 75%;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
+.submit-area input:nth-child(1) {
+  width: 25%;
+  height: 75%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.sumbit-area input:nth-child(2){
-    width: 60%;
-    height: 75%;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
+.submit-area input:nth-child(2) {
+  width: 60%;
+  height: 75%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.sumbit-area button {
-    align-items: center;
-    background-clip: padding-box;
-    background-color: #fa6400;
-    border: 2px solid rgb(255, 72, 0);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    position: relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: 12%;
-    height: 105%;
+.submit-area button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 2px solid rgb(255, 72, 0);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 12%;
+  height: 105%;
 }
 
-.sumbit-area button:hover,
-.sumbit-area button:focus {
-    background-color: #fb8332;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+.submit-area button:hover,
+.submit-area button:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.sumbit-area button:hover {
-    transform: translateY(-1px);
+.submit-area button:hover {
+  transform: translateY(-1px);
 }
 
-.sumbit-area button:active {
-    background-color: #c85000;
-    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-    transform: translateY(0);
+.submit-area button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
 }
 
-.guestbook-inner{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    width: 60vh;
-    height: 80vh;
-    background-color: white;
-    border-radius: 5px;
+.guestbook-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 60vh;
+  height: 80vh;
+  background-color: white;
+  border-radius: 5px;
 }
 
-.guestbook-contents{
-    position: relative;
-    display: flex;
-    width: 85%;
-    height: 80%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    background-color: rgb(230, 230, 230);
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow-y: auto;
-    border: 2px solid black;
+.guestbook-contents {
+  position: relative;
+  display: flex;
+  width: 85%;
+  height: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffea80;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border: 2px solid black;
 }
 
-.messagebox{
-    position: relative;
-    width: 100%;
-    display: flex;    
+.messagebox {
+  position: relative;
+  width: 100%;
+  display: flex;
 }
 
-.messagebox p{
-    position: relative;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
+.messagebox p {
+  position: relative;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
 }
 
-.messagebox p span:nth-child(1){
-    width: 60%;
-}
-.messagebox p span:nth-child(2){
-    width: 33%;
-    text-align: end;
-}
-.messagebox p span:nth-child(3){
-    width: 7%;
-    text-align: end;
-    cursor: pointer;
-    font-weight: 700;
+.messagebox p span:nth-child(1) {
+  width: 60%;
 }
 
+.messagebox p span:nth-child(2) {
+  width: 33%;
+  text-align: end;
+}
 
+.messagebox p span:nth-child(3) {
+  width: 7%;
+  text-align: end;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.loader-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.chicken-loader {
+/* Bird Wattle */
+  animation: birdWattle 1s linear infinite;
+  border: 1.2rem solid transparent;
+  border-left: 1.2rem solid #900;
+  border-bottom: 1.2rem solid #900;
+  border-radius: 50%;
+  height: 10rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 10rem;
+}
+
+.chicken-loader::before, .chicken-loader::after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chicken-loader::before {
+/* Large beak with head */
+  animation: birdBeak 1s linear infinite;
+}
+
+.chicken-loader::after {
+/* Small beak */
+  animation: birdBottomBeak 1s linear infinite;
+  border: 2.4rem solid transparent;
+  border-right: 2.4rem solid #cc8400;
+}
+
+.chicken-loader span {
+/* Eye */
+  animation: birdEye 1s linear infinite;
+  background: black;
+  border-radius: 50%;
+  height: 1.6rem;
+  left: 1.6rem;
+  position: absolute;
+  top: 3.1rem;
+  width: 1.6rem;
+}
+
+@keyframes birdWattle {
+    0%, 20%, 100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+  }
+    40%, 80% {
+        transform: translate(-50%, -50%) rotate(225deg);
+  }
+}
+@keyframes birdBeak {
+    0%, 20%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        border: 4rem solid transparent;
+        border-top: 4rem solid orange;
+        border-left: 4rem solid white;
+        border-bottom: 4rem solid lightgray;
+  }
+    40%, 80% {
+        border-top: 4rem solid lightgray;
+        border-left: 4rem solid white;
+        border-bottom: 4rem solid orange;
+        transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+@keyframes birdBottomBeak {
+    0%, 20%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+  }
+    40%, 80% {
+        transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+@keyframes birdEye {
+    0%, 20%, 100% {
+        transform: translate(0, 0);
+  }
+    40%, 80% {
+        transform: translate(1.5rem, 1.5rem);
+  }
+}

@@ -1,7 +1,17 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
+@font-face {
+  font-family: "Ownglyph_meetme-Rg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "WAGURITTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2")
+    format("woff2");
+}
 
 /* reset */
 div,
@@ -18,16 +28,16 @@ li {
 }
 
 * {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Ownglyph_meetme-Rg", sans-serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 2px;
 }
 
 body {
   display: flex;
   justify-content: center;
-  width: 100%;
-  background-color: #ffea80;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -37,12 +47,12 @@ h2 {
 }
 
 .mini_title1 {
-  background: url(/img/chicken.png) no-repeat 390px;
+  background: url(../img/chicken.png) no-repeat 390px;
   background-size: 40px 40px;
 }
 
 .mini_title2 {
-  background: url(/img/chicken.png) no-repeat 400px 30px;
+  background: url(../img/chicken.png) no-repeat 400px 30px;
   background-size: 40px 40px;
 }
 
@@ -95,6 +105,7 @@ h2 {
 }
 
 .slider_wrap > h2 {
+  padding-left: 70px;
   padding-top: 30px;
 }
 
@@ -118,34 +129,33 @@ h2 {
 
 /* 이미지 */
 .slider_img1 {
-  background: url(/img/image1.png) no-repeat 70px 0;
+  background: url(../img/image1.png) no-repeat 70px 0;
   background-size: 200px 211px;
 }
 
 .slider_img2 {
-  background: url(/img/image2.png) no-repeat 70px 0;
+  background: url(../img/image2.png) no-repeat 70px 0;
   background-size: 200px 211px;
 }
 
 .slider_img3 {
-  background: url(/img/image3.png) no-repeat 70px 0;
+  background: url(../img/image3.png) no-repeat 70px 0;
   background-size: 200px 211px;
 }
 
 .slider_img4 {
-  background: url(/img/image4.png) no-repeat 70px 0;
+  background: url(../img/image4.png) no-repeat 70px 0;
   background-size: 200px 211px;
 }
 
 .slider_img5 {
-  background: url(/img/image5.png) no-repeat 70px 0;
+  background: url(../img/image5.png) no-repeat 70px 0;
   background-size: 200px 211px;
 }
 
 .main2 {
   color: black;
   font-size: 40px;
-  background-color: #ffea80;
   background-position: center;
   background-size: cover;
 }
@@ -171,31 +181,22 @@ h2 {
 .talk {
   width: 200px;
   height: 200px;
-  background-image: url(/img/talk.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   display: table;
 }
 
-.talk2 {
-  width: 200px;
-  height: 200px;
-  background-image: url(/img/talk2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: table;
+.img1 {
+  background-image: url(../img/talk.png);
 }
 
-.talk3 {
-  width: 200px;
-  height: 200px;
-  background-image: url(/img/talk3.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: table;
+.img2 {
+  background-image: url(../img/talk2.png);
+}
+
+.img3 {
+  background-image: url(../img/talk3.png);
 }
 
 .bord {
