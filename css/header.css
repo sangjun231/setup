@@ -19,14 +19,14 @@ h1 {
 .header {
   position: relative;
   display: flex;
-  height: 200px;
-  justify-content: center;
-  align-items: center;
+  height: 300px;
   padding-top: 100px;
-  /* margin: 80px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-52%); */
+  /* justify-content: center;
+  align-items: center;
+  margin: 80px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-52%); */
 }
 
 .mainSlogun {
@@ -44,7 +44,7 @@ h1 {
   z-index: 10;
 }
 
-.mainSlogun:before,
+/* .mainSlogun:before,
 .mainSlogun:after {
   content: "";
   position: absolute;
@@ -63,8 +63,8 @@ h1 {
 }
 
 .mainSlogun:after {
-  top: 0;
-}
+  bottom: 0;
+} */
 
 .mainSlogun:hover {
   letter-spacing: 30px;
@@ -82,17 +82,17 @@ h1 {
 }
 
 .react-background {
-  color: red;
+  /* color: red;
   font-family: "Whisper", cursive;
   text-align: center;
   font-size: 100px;
-  font-weight: 100;
-  bottom: 55px;
-  left: 10%;
+  font-weight: 100; */
+  bottom: 50px;
+  left: 17%;
   position: absolute;
   transition: 5s;
   -webkit-transition: 1s;
   -ms-transition: 1s;
-  opacity: 0.1;
+  opacity: 0.6;
   z-index: -1;
 }
