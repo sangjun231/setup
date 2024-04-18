@@ -26,6 +26,8 @@ li {
 body {
   display: flex;
   justify-content: center;
+  width: 100%;
+  background-color: #ffea80;
 }
 
 h2 {
