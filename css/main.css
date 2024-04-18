@@ -51,7 +51,7 @@ h2 {
 }
 
 .mini_title2 {
-  background: url(../img/chicken.png) no-repeat 370px 30px;
+  background: url(../img/chicken.png) no-repeat 400px 30px;
   background-size: 40px 40px;
 }
 
@@ -104,6 +104,7 @@ h2 {
 }
 
 .slider_wrap > h2 {
+  padding-left: 70px;
   padding-top: 30px;
 }
 
@@ -154,7 +155,6 @@ h2 {
 .main2 {
   color: black;
   font-size: 40px;
-  background-color: #ffea80;
   background-position: center;
   background-size: cover;
 }
