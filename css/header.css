@@ -5,7 +5,8 @@
 
 body {
   width: 100%;
-  background-color: #ffea80;
+  background-color: tomato;
+  background-size: cover;
 }
 
 h1 {
