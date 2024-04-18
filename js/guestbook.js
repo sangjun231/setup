@@ -147,7 +147,9 @@ const drawMessages = async () => {
 // drawOrRemove는 그릴지 지울지 스트링타입
 const drawLoaders = (drawOrRemove) => {
   // 로더 dom
-  const loader = `<div class='loader-wrapper'><span class="loader"></span><div>`;
+  // const loader = `<div class='loader-wrapper'><span class="loader"></span><div>`;
+  const loader = `<div class='chicken-loader'><span></span><div>`;
+
   // 그려야 하는 div 선택
   const parent = document.querySelector(".guestbook-contents");
   // 해당 div !null 이면
@@ -171,7 +173,9 @@ const handleGuestBtnClick = async (event) => {
   // 로더 삽입
   drawLoaders("draw");
   // 메시지 가져오고 삽입하고
-  await drawMessages();
+  setTimeout(async () => {
+    await drawMessages();
+}, 1000);
 
   // 찾아야 하는 요소들 탐색 및 저장
   const messageInput = document.getElementById("guestbook-input");

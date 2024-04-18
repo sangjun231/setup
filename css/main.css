@@ -37,6 +37,7 @@ li {
 body {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 h2 {
