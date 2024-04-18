@@ -30,6 +30,9 @@ function onGeoOk(position) {
         case "Wind":
           weatherImage.src = "./img/wind_image.png";
           break;
+        case "Clear":
+          weatherImage.src = "./img/sun_image.png";
+          break;
         default:
           weatherImage.src = "default_image.png";
           break;

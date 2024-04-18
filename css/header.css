@@ -1,19 +1,7 @@
-/* * {
-  margin: 0;
-  padding: 0;
-} */
-
-/* h1 {
-  font-size: 60px;
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-} */
-
 .header {
   position: relative;
   display: flex;
-  height: 200px;
+  height: 300px;
   padding-top: 100px;
   /* justify-content: center;
   align-items: center;
@@ -26,38 +14,39 @@
 .mainSlogun {
   font-size: 60px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "WAGURITTF";
   text-align: center;
   color: #000000;
-  padding: 10px;
+  letter-spacing: 0px;
   transition: 1s;
   -webkit-transition: 1s;
   -ms-transition: 1s;
-  position: static;
-  z-index: 1;
+  position: relative;
+  padding: 10px;
+  z-index: 10;
 }
 
-.mainSlogun:before,
+/* .mainSlogun:before,
 .mainSlogun:after {
   content: "";
   position: absolute;
   height: 7px;
   width: 0px;
   background: #000000;
-  transition: 1s;
+  transition: 300ms;
   -webkit-transition: 1s;
   -ms-transition: 1s;
-  opacity: 0.1;
+  opacity: 0.3;
   left: 50%;
 }
 
 .mainSlogun:before {
-  top: 0;
+  bottom: 0;
 }
 
 .mainSlogun:after {
   bottom: 0;
-}
+} */
 
 .mainSlogun:hover {
   letter-spacing: 30px;
@@ -73,20 +62,19 @@
 .mainSlogun:hover ~ .react-background {
   opacity: 0;
 }
-/* 형제 선택자까지 적용 */
 
 .react-background {
-  color: red;
+  /* color: red;
   font-family: "Whisper", cursive;
-  /* text-align: center; */
+  text-align: center;
   font-size: 100px;
-  font-weight: 100;
-  bottom: 30px;
-  left: 10%;
+  font-weight: 100; */
+  bottom: 50px;
+  left: 17%;
   position: absolute;
   transition: 5s;
   -webkit-transition: 1s;
   -ms-transition: 1s;
-  opacity: 0.1;
+  opacity: 0.6;
   z-index: -1;
 }

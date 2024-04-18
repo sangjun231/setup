@@ -6,20 +6,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-image: url(../img/backImg.png);
   width: 100%;
   height: 643px;
   left: 0%;
   gap: 1rem;
+  scale: 98%;
 }
 
 .card {
   width: 300px;
   height: 600px;
-  /* margin: 30px 30px; */
-  /* padding: 30px; */
+  margin: 16px;
   perspective: 1000px;
   border: 0px;
+  background: transparent;
 }
 
 .front img {
@@ -51,6 +52,7 @@
   border-radius: 15px;
   background-color: #fbe9c7;
   transform: rotateY(0deg);
+  border: 4px solid rgba(101, 102, 87, 0.925);
 }
 
 .back {
@@ -62,12 +64,15 @@
 .card:hover .front {
   transform: rotateY(-180deg);
   border-radius: 15px;
+  box-shadow: 0 0 0 8px #ff9f10;
   scale: 120%;
+  border-style: none;
 }
 
 .card:hover .back {
   transform: rotateY(0deg);
-  border-radius: 15px;
+  border-radius: 16px;
+  box-shadow: 0 0 0 8px #ff9f10;
   scale: 120%;
 }
 

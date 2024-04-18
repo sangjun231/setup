@@ -115,7 +115,7 @@ const messagesToHtml = (messages) => {
                 <p>
                     <span>${e.message}</span>
                     <span>from ${e.name}</span>
-                    <span id='delete'>x</span>
+                    <span class='delete' style="z-index:999">x</span>
                 </p>
             </div>`
         return temp_html;
@@ -147,7 +147,8 @@ const drawMessages = async () => {
 // drawOrRemove는 그릴지 지울지 스트링타입
 const drawLoaders = (drawOrRemove) => {
     // 로더 dom
-    const loader = `<div class='loader-wrapper'><span class="loader"></span><div>`;
+    // const loader = `<div class='loader-wrapper'><span class="loader"></span><div>`;
+    const loader = `<div class='chicken-loader'><span></span><div>`;
     // 그려야 하는 div 선택
     const parent = document.querySelector(".guestbook-contents");
     // 해당 div !null 이면
@@ -171,14 +172,18 @@ const handleGuestBtnClick = async (event) => {
     // 로더 삽입
     drawLoaders("draw");
     // 메시지 가져오고 삽입하고
-    await drawMessages();
+    setTimeout(async () => {
+        await drawMessages();
+        // 삭제 버튼들 이벤트 리스너 최초 등록
+        addDelListener();
+    }, 1000);
 
     // 찾아야 하는 요소들 탐색 및 저장
     const messageInput = document.getElementById("guestbook-input");
     const nameInput = document.getElementById("guestbook-name");
     const submitBtn = document.getElementById("guestbook-submit");
     const modal = document.querySelector(".guestbook-modal");
-    let delBtns = document.querySelectorAll("#delete");
+    let delBtns = document.querySelectorAll(".delete");
 
     // 콘텐츠 외부를 클릭하면 모달 자체가 사라지게(x버튼 없이 외부 클릭으로 사라지게끔)
     if (modal)
@@ -204,6 +209,8 @@ const handleGuestBtnClick = async (event) => {
         const newMessages = await getMessages();
         // GET한 배열에서 파라미터로 받은 index 를 찾아서 name 프로퍼티를 name 변수에 할당
         const name = newMessages[index].name;
+
+        console.log(name)
         // DELETE 요청 실행
         const result = await delMessages(name);
         console.log("지우기 성공");
@@ -213,7 +220,7 @@ const handleGuestBtnClick = async (event) => {
 
     // 모든 x(게시물 삭제)버튼을 선택하고, 반복하여 클릭 이벤트 삭제 함수 등록
     const addDelListener = () => {
-        delBtns = document.querySelectorAll("#delete");
+        const delBtns = document.querySelectorAll(".delete");
         if (delBtns) {
             delBtns.forEach((e, i) => {
                 e.addEventListener("click", (event) => handledelete(event, i));
@@ -261,8 +268,6 @@ const handleGuestBtnClick = async (event) => {
     // 제출 버튼 이벤트 리스너
     if (submitBtn) submitBtn.addEventListener("click", () => handlesubmit(nameValue));
 
-    // 삭제 버튼들 이벤트 리스너 최초 등록
-    addDelListener();
 }
 
 // 방명록 버튼 이벤트 리스너(클릭시 이모든 것들이 실행됨...)
