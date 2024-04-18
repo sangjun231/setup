@@ -37,8 +37,6 @@ li {
 body {
   display: flex;
   justify-content: center;
-  width: 100%;
-  background-color: #ffea80;
 }
 
 h2 {
@@ -106,6 +104,7 @@ h2 {
 }
 
 .slider_wrap > h2 {
+  padding-left: 70px;
   padding-top: 30px;
 }
 
@@ -156,7 +155,6 @@ h2 {
 .main2 {
   color: black;
   font-size: 40px;
-  background-color: #ffea80;
   background-position: center;
   background-size: cover;
 }
