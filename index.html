@@ -42,6 +42,11 @@
           controls: false,
         });
 
+        // 아래 3줄 추가
+        const bxViewport = document.querySelector('.bx-viewport');
+        bxViewport.style.overflow = 'unset';
+        bxViewport.style.height = '100%';
+
         $(document).on(
           "click",
           ".bx-pager, #pager, .bx-prev, .bx-next, .main_img_wrap",

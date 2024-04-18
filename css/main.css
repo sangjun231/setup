@@ -92,9 +92,17 @@ h2 {
   border-radius: 30px;
 }
 
+/* 240418 10:20 오은 수정 */
 .slider_wrap > h2 {
   padding-top: 30px;
+  height: 25%;
+  margin-bottom: 0px;
 }
+
+.bx-wrapper{
+  height: 75%;
+}
+/* 여기까지 */
 
 .content {
   width: 750px;
