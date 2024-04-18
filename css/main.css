@@ -38,6 +38,7 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  background-color: #ffea80;
 }
 
 h2 {
