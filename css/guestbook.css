@@ -158,7 +158,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    background-color: rgb(230, 230, 230);
+    background-color: #ffea80;    
     padding: 1rem;
     box-sizing: border-box;
     overflow-y: auto;
