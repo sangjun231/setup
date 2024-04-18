@@ -2,6 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
+@font-face {
+  font-family: "Ownglyph_meetme-Rg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "WAGURITTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2")
+    format("woff2");
+}
 
 /* reset */
 div,
@@ -18,9 +28,10 @@ li {
 }
 
 * {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Ownglyph_meetme-Rg", sans-serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 2px;
 }
 
 body {
