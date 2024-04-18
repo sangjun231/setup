@@ -259,7 +259,7 @@ const handleGuestBtnClick = async (event) => {
     // 이름 input 이벤트 리스너
     if (nameInput) nameInput.addEventListener("input", handleNameInput);
     // 제출 버튼 이벤트 리스너
-    if (submitBtn) submitBtn.addEventListener("click", handlesubmit);
+    if (submitBtn) submitBtn.addEventListener("click", () => handleSumbit(nameValue));
 
     // 삭제 버튼들 이벤트 리스너 최초 등록
     addDelListener();
