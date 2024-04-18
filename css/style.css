@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+/* 여기서부터 카드배치 & 효과 */
+.intro-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 643px;
+  left: 0%;
+  gap: 1rem;
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  /* margin: 30px 30px; */
+  /* padding: 30px; */
+  perspective: 1000px;
+  border: 0px;
+}
+
+.front img {
+  border-radius: 15px;
+  width: auto;
+  height: 300px;
+}
+
+.back img {
+  border-radius: 15px;
+  width: auto;
+  height: 100%;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.8s ease;
+}
+
+.front {
+  border-radius: 15px;
+  background-color: #fbe9c7;
+  transform: rotateY(0deg);
+}
+
+.back {
+  border-radius: 15px;
+  background-color: #fbe9c7;
+  transform: rotateY(-180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+  border-radius: 15px;
+  scale: 120%;
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+  border-radius: 15px;
+  scale: 120%;
+}
+
+.cardimg-wrapper {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-name {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.back a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .back a:hover {
+    color: #ffea80;
+  }
+}
+
+.card-back-contents {
+  position: relative;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-back-contents:nth-child(1),
+.card-back-contents:nth-child(2) {
+  height: 15%;
+}
+
+.card-back-contents:nth-child(3),
+.card-back-contents:nth-child(4),
+.card-back-contents:nth-child(5) {
+  height: 20%;
+}
+
+.card-back-contents p {
+  margin-bottom: 0;
+}
+
+.card-back-contents p:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.card-back-contents p:nth-child(2) {
+  font-size: 1.1rem;
+}
+
+.card-back-contents a > p:nth-child(1) {
+  font-size: 1.1rem;
+}

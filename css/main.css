@@ -1,0 +1,217 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
+
+/* reset */
+div,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+* {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  background-size: 40px 40px;
+}
+
+.mini_title1 {
+  background: url(/img/chicken.png) no-repeat 390px;
+  background-size: 40px 40px;
+}
+
+.mini_title2 {
+  background: url(/img/chicken.png) no-repeat 400px 30px;
+  background-size: 40px 40px;
+}
+
+.body-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-wrapper-contained {
+  width: 1440px;
+  height: auto;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.main {
+  width: 100%;
+  color: black;
+  /* background-color: #fff; */
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.white_box {
+  width: 1000px;
+  background-color: rgb(255, 255, 255, 0.8);
+  margin: 0 auto;
+  border-radius: 30px !important;
+}
+
+/* slider_wrap */
+.slider_wrap {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 30px;
+}
+
+.slider_wrap > h2 {
+  padding-top: 30px;
+}
+
+.content {
+  width: 750px;
+  height: 250px;
+}
+
+.inside_navi {
+  width: 630px;
+  height: 250px;
+  float: right;
+}
+
+.inside_navi > li {
+  padding-top: 50px;
+  padding-right: 20px;
+  font-size: 25px;
+  line-height: 1.4em;
+}
+
+/* 이미지 */
+.slider_img1 {
+  background: url(/img/image1.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img2 {
+  background: url(/img/image2.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img3 {
+  background: url(/img/image3.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img4 {
+  background: url(/img/image4.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.slider_img5 {
+  background: url(/img/image5.png) no-repeat 70px 0;
+  background-size: 200px 211px;
+}
+
+.main2 {
+  color: black;
+  font-size: 40px;
+  background-color: #ffea80;
+  background-position: center;
+  background-size: cover;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 2rem 0;
+}
+
+.item {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item span {
+  font-size: 2rem;
+}
+
+.talk {
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/talk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: table;
+}
+
+.talk2 {
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/talk2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: table;
+}
+
+.talk3 {
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/talk3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: table;
+}
+
+.bord {
+  margin-bottom: 1px;
+  width: 100px;
+  height: 50px;
+  border: 1px;
+  text-align: center;
+}
+
+.foot {
+  position: relative;
+  padding: 29px 0;
+  background-color: #ffea80;
+}
+
+#main-logo {
+  width: 30%;
+  position: relative;
+  left: 5%;
+}

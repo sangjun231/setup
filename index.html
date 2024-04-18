@@ -1,3 +1,446 @@
-hi. chicken! hi. 안녕하세요. 저는 오은 입니다. 잘 부탁드립니다. 김민수입니다
-다같이 화이팅!!~ 안녕하세요! 신상준입니당!! 안녕하세요~~ 박수미입니다 화이팅~
-반갑습니다 김병준입니다 왜 이렇게 안 되지 이거
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>치킨사조 소개 페이지</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/guestbook.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/button.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/weather.css" />
+    <link rel="icon" href="./img//chicken.svg" />
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //상단 이미지
+        var slider = $(".slider").bxSlider({
+          auto: true,
+          mode: "fade",
+          pager: false,
+          autoStart: true,
+          controls: false,
+        });
+
+        $(document).on(
+          "click",
+          ".bx-pager, #pager, .bx-prev, .bx-next, .main_img_wrap",
+          function () {
+            slider.startAuto;
+          }
+        );
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="body-wrapper">
+      <div class="body-wrapper-contained">
+        <div class="header">
+          <div class="main-title">
+            <div id="main-logo">
+              <h1 class="mainSlogun" style="margin: 0">치킨사조</h1>
+            </div>
+            <h2 class="react-background">React_5th</h2>
+            <!-- <button id="guestbookbtn">방명록</button> -->
+          </div>
+
+          <div class="frame">
+            <button class="custom-btn btn-5" id="guestbookbtn">방명록</button>
+          </div>
+        </div>
+
+        <div class="main">
+          <div class="p-0 mb-0 bg-body-tertiary rounded-3 white_box">
+            <div class="container-fluid py-5">
+              <h2 class="mini_title1">팀 소개</h2>
+              <p style="text-align: center" class="col-md-30 fs-2">
+                Winner! Winner! Chicken Dinner!<br />각자의 꿈을 가지고 치킨을
+                맘껏 먹고 싶은 4조입니다!!!!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <script src="./js/weather.js"></script>
+        <div id="weather-section">
+          <div id="weather">
+            <span class="weather"></span>
+            <span class="where"></span>
+          </div>
+        </div>
+
+        <!-- 우리들의 특징 슬라이드 -->
+        <div class="slider_wrap">
+          <h2 class="mini_title2">팀 특징</h2>
+          <ul class="slider">
+            <li class="content slider_img1">
+              <ul class="inside_navi">
+                <li>1. 서로를 배려하며 소통한다.</li>
+              </ul>
+            </li>
+
+            <li class="content slider_img2">
+              <ul class="inside_navi">
+                <li>2. 적극적인 참여로 진취적인 분위기이다.</li>
+              </ul>
+            </li>
+
+            <li class="content slider_img3">
+              <ul class="inside_navi">
+                <li>3. 문제해결능력이 뛰어난 팀원이 많다.</li>
+              </ul>
+            </li>
+
+            <li class="content slider_img4">
+              <ul class="inside_navi">
+                <li>
+                  4. 비전과 목표의 명확한 설정으로 팀의 방향성이 뚜렷하다.
+                </li>
+              </ul>
+            </li>
+
+            <li class="content slider_img5">
+              <ul class="inside_navi">
+                <li>
+                  5. 다양한 배경과 역량을 가진 팀원들로 구성되어 혁신적인
+                  아이디어를 창출해낸다.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main2">
+          <div class="container-fluid py-5">
+            <h2 class="mini_title3">우리팀의 규칙</h2>
+          </div>
+          <div class="container2">
+            <div class="item">
+              <div class="talk"></div>
+              <span>1.착한 말 쓰기</span>
+            </div>
+            <div class="item">
+              <div class="talk2"></div>
+              <span>2.자기 의견 적극적으로 얘기하기</span>
+            </div>
+            <div class="item">
+              <div class="talk3"></div>
+              <span>3.궁금하면 바로 질문하기</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="intro-section">
+        <div class="card">
+          <div class="front">
+            <div class="cardimg-wrapper">
+              <img src="./img/sangjun.png" alt="" />
+            </div>
+            <div class="basic-name">
+              <p>이름 : 신상준</p>
+              <p>mbti : ESFP</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card-back-contents">
+              <p>GitHub</p>
+              <a href="https://github.com/sangjun231" target="_blank"
+                ><p>https://github.com/sangjun231</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>Blog</p>
+              <a href="https://juni-shin.tistory.com" target="_blank"
+                ><p>https://juni-shin.tistory.com</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>성격</p>
+              <p>밝고 쾌할함<br />감정이 넘쳐 흐름</p>
+            </div>
+            <div class="card-back-contents">
+              <p>스타일</p>
+              <p>
+                팀원들의 참여 유도를 많이하고 모두의 협의점을 찾아 하는 진행을
+                지향함
+              </p>
+            </div>
+            <div class="card-back-contents">
+              <p>한마디</p>
+              <p>우리 팀원 모두 만족스러운 결과를 얻어 성공했으면 좋겠음! :)</p>
+            </div>
+            <div class="card-back-icons">
+              <a href="https://github.com/sangjun231" target="_blank"
+                ><img src="./img/giticon.png"
+              /></a>
+              <a href="https://juni-shin.tistory.com" target="_blank"
+                ><img src="./img/tistoryicon.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <div class="cardimg-wrapper">
+              <img src="./img/sumi.png" alt="" />
+            </div>
+            <div class="basic-name">
+              <p>이름 : 박수미</p>
+              <p>mbti : ISFP</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card-back-contents">
+              <p>GitHub</p>
+              <a href="https://github.com/sumii-7" target="_blank"
+                ><p>https://github.com/sumii-7</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>Blog</p>
+              <a href="https://sumii-7.tistory.com" target="_blank"
+                ><p>https://sumii-7.tistory.com</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>성격</p>
+              <p>꼼꼼하지 못해서 계획적으로 일을 처리하려 노력한다</p>
+            </div>
+            <div class="card-back-contents">
+              <p>스타일</p>
+              <p>
+                맡은 업무에 최선을 다하고 팀원들의 의견을 적극적으로
+                수용합니다..!
+              </p>
+            </div>
+            <div class="card-back-contents">
+              <p>한마디</p>
+              <p>다들 어렵지만 화이팅 합시다 ~!</p>
+            </div>
+            <div class="card-back-icons">
+              <a href="https://github.com/sumii-7" target="_blank"
+                ><img src="./img/giticon.png"
+              /></a>
+              <a href="https://sumii-7.tistory.com" target="_blank"
+                ><img src="./img/tistoryicon.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <div class="cardimg-wrapper">
+              <img src="./img/eun.png" alt="" />
+            </div>
+            <div class="basic-name">
+              <p>이름 : 오은</p>
+              <p>mbti : INTJ</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card-back-contents">
+              <p>GitHub</p>
+              <a href="https://github.com/eunohhh" target="_blank"
+                ><p>https://github.com/eunohhh</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>Blog</p>
+              <a href="https://ifelseif.tistory.com/" target="_blank"
+                ><p>https://ifelseif.tistory.com/</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>성격</p>
+              <p>말 수가 적고 내성적이지만 열심히 소통하고자 합니다</p>
+            </div>
+            <div class="card-back-contents">
+              <p>스타일</p>
+              <p>될 때까지 해보자...!</p>
+            </div>
+            <div class="card-back-contents">
+              <p>한마디</p>
+              <p>모두 화이팅...!!!</p>
+            </div>
+            <div class="card-back-icons">
+              <a href="https://github.com/eunohhh" target="_blank"
+                ><img src="./img/giticon.png"
+              /></a>
+              <a href="https://ifelseif.tistory.com/" target="_blank"
+                ><img src="./img/tistoryicon.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <div class="cardimg-wrapper">
+              <img src="./img/minsu.png" alt="" />
+            </div>
+            <div class="basic-name">
+              <p>이름 : 김민수</p>
+              <p>mbti : INTJ</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card-back-contents">
+              <p>GitHub</p>
+              <a href="https://github.com/Minsu1322" target="_blank"
+                ><p>https://github.com/Minsu1322</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>Blog</p>
+              <a href="https://velog.io/@minsu1322/posts" target="_blank"
+                ><p>https://velog.io/@minsu1322/posts</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>성격</p>
+              <p>
+                무언가 나서서 먼저하지는 않지만 맡은일은 최대한 하는편 낯
+                많이가림 ㅎ.ㅎ...
+              </p>
+            </div>
+            <div class="card-back-contents">
+              <p>스타일</p>
+              <p>파트분배 후, 맡은역할부터 다 끝낸뒤 도와주기</p>
+            </div>
+            <div class="card-back-contents">
+              <p>한마디</p>
+              <p>열심히 해보겠습니다. 다들 화이팅!!~</p>
+            </div>
+            <div class="card-back-icons">
+              <a href="https://github.com/Minsu1322" target="_blank"
+                ><img src="./img/giticon.png"
+              /></a>
+              <a href="https://velog.io/@minsu1322/posts" target="_blank"
+                ><img src="./img/velogicon.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <div class="cardimg-wrapper">
+              <img src="./img/byungjun.png" alt="" />
+            </div>
+            <div class="basic-name">
+              <p>이름 : 김병준</p>
+              <p>mbti : INFJ</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card-back-contents">
+              <p>GitHub</p>
+              <a href="https://github.com/captain-kim" target="_blank"
+                ><p>https://github.com/captain-kim</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>Blog</p>
+              <a href="https://infistudy.tistory.com/" target="_blank"
+                ><p>https://infistudy.tistory.com/</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>성격</p>
+              <p>베리굿</p>
+            </div>
+            <div class="card-back-contents">
+              <p>스타일</p>
+              <p>좋은편</p>
+            </div>
+            <div class="card-back-contents">
+              <p>한마디</p>
+              <p>팀운이 좋습니다</p>
+            </div>
+            <div class="card-back-icons">
+              <a href="https://github.com/captain-kim" target="_blank"
+                ><img src="./img/giticon.png"
+              /></a>
+              <a href="https://infistudy.tistory.com/" target="_blank"
+                ><img src="./img/tistoryicon.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front">
+            <div class="cardimg-wrapper">
+              <img src="./img/yusang.png" alt="" />
+            </div>
+            <div class="basic-name">
+              <p>이름 : 최유상</p>
+              <p>mbti : INTJ</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card-back-contents">
+              <p>GitHub</p>
+              <a href="https://github.com/Kyara0324" target="_blank"
+                ><p>https://github.com/Kyara0324</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>Blog</p>
+              <a href="https://blog.naver.com/kyara0324" target="_blank"
+                ><p>https://blog.naver.com/kyara0324</p></a
+              >
+            </div>
+            <div class="card-back-contents">
+              <p>성격</p>
+              <p>호기심이 많음</p>
+            </div>
+            <div class="card-back-contents">
+              <p>스타일</p>
+              <p>이해할때까지 파고들기</p>
+            </div>
+            <div class="card-back-contents">
+              <p>한마디</p>
+              <p>질문이 많아 귀찮으실 수 있지만 잘 부탁드립니다</p>
+            </div>
+            <div class="card-back-icons">
+              <a href="https://github.com/Kyara0324" target="_blank"
+                ><img src="./img/giticon.png"
+              /></a>
+              <a href="https://blog.naver.com/kyara0324" target="_blank"
+                ><img src="./img/navericon.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="foot"></footer>
+    </div>
+    <script type="module" src="./js/guestbook.js"></script>
+  </body>
+</html>
