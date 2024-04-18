@@ -13,7 +13,7 @@
 .header {
   position: relative;
   display: flex;
-  height: 200px;
+  height: 300px;
   padding-top: 100px;
   /* justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
   z-index: 1;
 }
 
-.mainSlogun:before,
+/* .mainSlogun:before,
 .mainSlogun:after {
   content: "";
   position: absolute;
@@ -57,7 +57,7 @@
 
 .mainSlogun:after {
   bottom: 0;
-}
+} */
 
 .mainSlogun:hover {
   letter-spacing: 30px;
@@ -76,17 +76,17 @@
 /* 형제 선택자까지 적용 */
 
 .react-background {
-  color: red;
+  /* color: red;
   font-family: "Whisper", cursive;
-  /* text-align: center; */
+  text-align: center;
   font-size: 100px;
-  font-weight: 100;
-  bottom: 30px;
-  left: 10%;
+  font-weight: 100; */
+  bottom: 50px;
+  left: 17%;
   position: absolute;
   transition: 5s;
   -webkit-transition: 1s;
   -ms-transition: 1s;
-  opacity: 0.1;
+  opacity: 0.6;
   z-index: -1;
 }
